@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "2cd6a9c7-b44f-4dfe-8448-a93a1b865666",
+		"name": "mapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllFavouriteMovies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/favourite/movies?page=0&size=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"favourite",
+						"movies"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllMovies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/omdb/movies/search/red",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"omdb",
+						"movies",
+						"search",
+						"red"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFavouriteMovie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/favourite/movies/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"favourite",
+						"movies",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMovie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/omdb/movies/tt0419887",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"omdb",
+						"movies",
+						"tt0419887"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateFavouriteMovie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"The Kite Runner\",\r\n    \"year\": \"2017\",\r\n    \"rated\": \"PG-13\",\r\n    \"released\": \"19 Jan 2017\",\r\n    \"runtime\": \"128 min\",\r\n    \"genre\": \"Drama\",\r\n    \"director\": \"Marc Forster\",\r\n    \"writer\": \"David Benioff (screenplay), Khaled Hosseini (novel)\",\r\n    \"actors\": \"Khalid Abdalla, Atossa Leoni, Shaun Toub, Sayed Jafar Masihullah Gharibzada\",\r\n    \"plot\": \"After spending years in California, Amir returns to his homeland in Afghanistan to help his old friend Hassan, whose son is in trouble.\",\r\n    \"language\": \"Dari, English, Pushto, Russian, Urdu\",\r\n    \"country\": \"USA, China, UK, Afghanistan\",\r\n    \"awards\": \"Nominated for 1 Oscar. Another 6 wins & 24 nominations.\",\r\n    \"ratings\": \"7.6\",\r\n    \"type\": \"movie\",\r\n    \"posterUrl\": \"https://m.media-amazon.com/images/M/MV5BOWM5Yzg4ODctM2ViMC00ZGEzLWI2YzEtZDYwY2E4YTBhYTY1XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/favourite/movies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"favourite",
+						"movies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createFavouriteMovie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"The Kite Runner\",\r\n    \"year\": \"2007\",\r\n    \"rated\": \"PG-13\",\r\n    \"released\": \"11 Jan 2008\",\r\n    \"runtime\": \"128 min\",\r\n    \"genre\": \"Drama\",\r\n    \"director\": \"Marc Forster\",\r\n    \"writer\": \"David Benioff (screenplay), Khaled Hosseini (novel)\",\r\n    \"actors\": \"Khalid Abdalla, Atossa Leoni, Shaun Toub, Sayed Jafar Masihullah Gharibzada\",\r\n    \"plot\": \"After spending years in California, Amir returns to his homeland in Afghanistan to help his old friend Hassan, whose son is in trouble.\",\r\n    \"language\": \"Dari, English, Pushto, Russian, Urdu\",\r\n    \"country\": \"USA, China, UK, Afghanistan\",\r\n    \"awards\": \"Nominated for 1 Oscar. Another 6 wins & 24 nominations.\",\r\n    \"ratings\": \"7.6\",\r\n    \"type\": \"movie\",\r\n    \"posterUrl\": \"https://m.media-amazon.com/images/M/MV5BOWM5Yzg4ODctM2ViMC00ZGEzLWI2YzEtZDYwY2E4YTBhYTY1XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/favourite/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"favourite",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteFavouriteMovie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/favourite/movies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"favourite",
+						"movies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
